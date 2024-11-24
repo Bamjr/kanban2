@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#kanbanBoard {
+    display: flex;
+    column-gap: 24px;
+    padding: 48px;
+    height: 100%;
+    width: 100%;
+}
+
+.laneWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.laneWrapper header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.swimlane {
+    border: 1px solid black;
+    flex-basis: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.card {
+    padding: 16px;
+    border-radius: 4px;
+
+    .toDo & {
+        background-color: yellow;
+    }
+
+    .inProgress & {
+        background-color: green;
+    }
+
+    .done & {
+        background-color: black;
+        color: white;
+    }
+
+    .hold & {
+        background-color: red;
+    }
+}
+
+#dragged {
+    background: red;
+}
